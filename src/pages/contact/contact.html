@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Intercity Pro</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../../../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Intercity <span class="highlight">Pro</span></div>
+            <nav>
+                <ul>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="./contact.html" class="active">Contact</a></li>
+                    <li><a href="../signin/signin.html">Sign In</a></li>
+                    <li><a href="../signUp/signup.html" class="btn-signin">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero" style="background: #000; height: 130vh;">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Get in <span class="highlight">Touch</span></h1>
+                <p>Have questions about our fare optimization? <br>Our team in Lahore is ready to help.</p>
+            </div>
+            <video autoplay muted loop id="hero-video">
+                <source src="./../../../assets/videos/taxi3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            <div class="booking-card-container" id="card-tilt">
+                <div class="booking-card" style="position: relative; top: 80px;">
+                    <h2>Send Message</h2>
+                    <form action="https://formspree.io/f/xpqykrej" method="POST">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" placeholder="e.g., Fariq Khalid" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="e.g., fariqkhalid@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="4" style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); padding: 12px; border-radius: 8px; color: white;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-book">Send to Support</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full py-20 bg-zinc-950 border-t border-zinc-900"  style="min-height: auto;">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-zinc-900/30 rounded-3xl border border-zinc-800">
+                <h4 class="text-yellow-400 font-bold mb-2">Office Location</h4>
+                <p class="text-gray-400 text-sm">Gulberg III, Main Boulevard, Lahore, Pakistan.</p>
+            </div>
+            <div class="p-8 bg-zinc-900/30 rounded-3xl border border-zinc-800">
+                <h4 class="text-yellow-400 font-bold mb-2">24/7 Support</h4>
+                <p class="text-gray-400 text-sm">support@intercitypro.pk</p>
+            </div>
+            <div class="p-8 bg-zinc-900/30 rounded-3xl border border-zinc-800">
+                <h4 class="text-yellow-400 font-bold mb-2">Social</h4>
+                <p class="text-gray-400 text-sm">Follow us @intercitypro</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Intercity <span class="highlight">Pro</span></div>
+                    <p>Smartly optimized intercity travel across Pakistan.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Driver Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Support</h4>
+                    <p>Email: support@intercitypro.pk</p>
+                    <p>Location: Lahore, Punjab</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Intercity Pro Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

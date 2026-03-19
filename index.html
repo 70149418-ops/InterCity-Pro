@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercity Pro - Optimized Intercity Rides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Intercity <span class="highlight">Pro</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="src/pages/about/about.html">About</a></li>
+                    <li><a href="src/pages/contact/contact.html">Contact</a></li>
+                    <li><a href="src/pages/signin/signin.html">Sign In</a></li>
+                    <li><a href="src/pages/signUp/signup.html" class="btn-signin">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero" id="booking">
+        <video autoplay muted loop id="hero-video">
+                <source src="./../../../assets/videos/taxi1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        <div class="video-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text animated-entrance">
+                <h1>Intercity Travel, <br>Smartly Optimized.</h1>
+                <p>Scheduled rides. Guaranteed fares. No-show protection.</p>
+                <div class="hero-badges">
+                    <span class="badge">Schedulable 📅</span>
+                    <span class="badge">Optimized 💰</span>
+                </div>
+            </div>
+            <div class="booking-card-container" id="card-tilt">
+                <div class="booking-card" id="card-tilt" style=" position: relative; top: 60px; ">
+                <h2>Book Your Ride</h2>
+                <form id="taxiForm" action="https://formspree.io/f/xpqykrej" method="POST">
+                    <div class="form-group">
+                        <label>Pickup Location</label>
+                        <input type="text" id="pickup" name="pickup" placeholder="e.g., Lahore" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Drop Location</label>
+                        <input type="text" id="drop" name="drop" placeholder="e.g., Karachi" required>
+                    </div>
+                    <div id="fare-display" style="display: none; margin-bottom: 20px; padding: 15px; border: 1px dashed #f1c40f; border-radius: 10px; background: rgba(241, 196, 15, 0.1);">
+                        <p style="margin: 0; color: #aaa; font-size: 14px;">Estimated Fare:</p>
+                        <h3 style="margin: 5px 0; color: #f1c40f; font-size: 24px;"><span id="pkr-price">0</span> PKR</h3>
+                        <small id="optimization-status" style="color: #2ecc71; font-weight: bold;"></small>
+                    </div>
+                    <button type="button" id="action-btn" class="btn-book">Price</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <h2>The Intercity Advantage</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass-effect">
+                    <div class="icon">💰</div>
+                    <h3>One-Way Fare Optimization</h3>
+                    <p>Our algorithm finds return passengers, lowering your fare by up to 30% if we match your leg.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="icon">📅</div>
+                    <h3>Scheduled Reliability</h3>
+                    <p>Book rides weeks in advance. Perfect for planned business or leisure travel.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="icon">⏰</div>
+                    <h3>No-Show Protection</h3>
+                    <p>Fair waiting policy. If you don't arrive, a small wait fee protects the driver's time.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="icon">🚗</div>
+                    <h3>Driver Delay Mitigation</h3>
+                    <p>Real-time tracking and automated backup driver assignment if your driver is delayed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Live Network Status</h2>
+            <div class="map-card-3d">
+                <div class="map-placeholder">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000" alt="Map View"> 
+                    <div class="taxi-marker">
+                        <span class="pulse"></span>
+                        <span class="icon">🚖</span>
+                    </div>
+                    <div class="map-overlay-info">
+                        <p>📍 14 Drivers Online in your area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-black" style="min-height: auto;">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-yellow-400 transition-colors">
+                    <h4 class="text-4xl font-bold text-yellow-400">50K+</h4>
+                    <p class="text-gray-400 text-sm uppercase tracking-wide">Rides Completed</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-yellow-400 transition-colors">
+                    <h4 class="text-4xl font-bold text-yellow-400">120</h4>
+                    <p class="text-gray-400 text-sm uppercase tracking-wide">Cities Covered</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-yellow-400 transition-colors">
+                    <h4 class="text-4xl font-bold text-yellow-400">4.9</h4>
+                    <p class="text-gray-400 text-sm uppercase tracking-wide">User Rating</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-yellow-400 transition-colors">
+                    <h4 class="text-4xl font-bold text-yellow-400">24/7</h4>
+                    <p class="text-gray-400 text-sm uppercase tracking-wide">Live Support</p>
+                </div>
+            </div>
+
+            <h2 class="text-center text-4xl font-bold mb-12">How to <span class="text-yellow-400">Book</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:bg-zinc-900 transition-all">
+                    <span class="w-12 h-12 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold mb-4 shadow-lg shadow-yellow-400/20">1</span>
+                    <h3 class="text-xl font-bold mb-2">Enter Route</h3>
+                    <p class="text-gray-400">Pick your start and end city in Pakistan.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:bg-zinc-900 transition-all">
+                    <span class="w-12 h-12 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold mb-4 shadow-lg shadow-yellow-400/20">2</span>
+                    <h3 class="text-xl font-bold mb-2">Get Fare</h3>
+                    <p class="text-gray-400">Our system calculates the optimized price instantly.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:bg-zinc-900 transition-all">
+                    <span class="w-12 h-12 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold mb-4 shadow-lg shadow-yellow-400/20">3</span>
+                    <h3 class="text-xl font-bold mb-2">Confirm</h3>
+                    <p class="text-gray-400">A driver is assigned and pings you immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-zinc-900 py-12 border-y border-zinc-800" style="min-height: auto;">
+        <div class="container grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-4 hover:scale-105 transition-transform">
+                <h4 class="text-3xl font-bold text-yellow-400">500+</h4>
+                <p class="text-gray-500 text-sm uppercase tracking-wider">Pro Drivers</p>
+            </div>
+            <div class="p-4 hover:scale-105 transition-transform">
+                <h4 class="text-3xl font-bold text-yellow-400">12k+</h4>
+                <p class="text-gray-500 text-sm uppercase tracking-wider">Happy Riders</p>
+            </div>
+            <div class="p-4 hover:scale-105 transition-transform">
+                <h4 class="text-3xl font-bold text-yellow-400">25%</h4>
+                <p class="text-gray-500 text-sm uppercase tracking-wider">Avg. Savings</p>
+            </div>
+            <div class="p-4 hover:scale-105 transition-transform">
+                <h4 class="text-3xl font-bold text-yellow-400">24/7</h4>
+                <p class="text-gray-500 text-sm uppercase tracking-wider">Live Support</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-black" style="min-height: auto;">
+        <div class="container text-center mb-12">
+            <h2 class="text-4xl font-bold text-white">Premium <span class="text-yellow-400">Fleets</span></h2>
+        </div>
+        <div class="container grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-yellow-400 transition shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Economy Pro</h3>
+                <p class="text-gray-400 text-sm mb-4">Affordable, reliable hatchbacks for budget travel.</p>
+                <span class="text-yellow-400 font-bold">From 40 PKR/km</span>
+            </div>
+
+            <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-yellow-400 transition shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Business Class</h3>
+                <p class="text-gray-400 text-sm mb-4">Premium sedans with extra legroom and comfort.</p>
+                <span class="text-yellow-400 font-bold">From 65 PKR/km</span>
+            </div>
+
+            <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-yellow-400 transition shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Executive Van</h3>
+                <p class="text-gray-400 text-sm mb-4">Luxury vans for family trips and group travel.</p>
+                <span class="text-yellow-400 font-bold">From 110 PKR/km</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-zinc-950" style="min-height: auto;">
+        <div class="container max-w-4xl text-center">
+            <figure class="mx-auto">
+                <svg class="w-10 h-10 mx-auto mb-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18..."></path></svg>
+                <blockquote>
+                    <p class="text-xl md:text-2xl italic font-medium text-white px-4">
+                        "Intercity Pro saved me 3000 PKR on my trip from Lahore to Multan. The driver was professional and the car was spotless!"
+                    </p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center mt-6 space-x-3 text-sm">
+                    <div class="font-bold text-yellow-400">Ali Hamza</div>
+                    <div class="text-gray-500">Frequent Traveler</div>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="container py-10" style="min-height: auto;"> 
+        <div class="bg-yellow-400 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between text-black">
+            <div>
+                <h2 class="text-3xl font-bold">Ready to save on your next trip?</h2>
+                <p class="font-medium">Get a promo code for your first booking.</p>
+            </div>
+            <div class="mt-6 md:mt-0">
+                <button class="bg-black text-white px-8 py-3 rounded-xl font-bold hover:opacity-80 transition"><a href="#booking">Get Started Now</a></button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Intercity <span class="highlight">Pro</span></div>
+                    <p>Smartly optimized intercity travel across Pakistan.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Driver Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Support</h4>
+                    <p>Email: support@intercitypro.pk</p>
+                    <p>Location: Lahore, Punjab</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Intercity Pro Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

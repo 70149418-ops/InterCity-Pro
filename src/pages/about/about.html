@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Intercity Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <script type="module" src="../../../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Intercity <span class="highlight">Pro</span></div>
+            <nav>
+                <ul>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="./about.html" class="active">About</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../signin/signin.html">Sign In</a></li>
+                    <li><a href="../signUp/signup.html" class="btn-signin">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-back">
+        <div class="video-overlay"></div>
+            <div class="container animated-entrance">
+                <h1 style="margin-top: 120px; font-size: 48px;">Our Smart <span class="highlight">Logic</span></h1>
+                <p style="color: #aaa; max-width: 600px;">We aren't just a taxi service. We use data to make intercity travel cheaper for you and more profitable for drivers.</p>
+                <div class="feature-grid" style="margin-top: 50px;">
+                    <div class="feature-card glass-effect">
+                        <div class="icon">💰</div>
+                        <h3>One-Way Optimization</h3>
+                        <p>We match your one-way trip with a return passenger. This allows us to offer you a 25% discount in PKR while ensuring the driver doesn't return with an empty car.</p>
+                    </div>
+                    <div class="feature-card glass-effect">
+                        <div class="icon">🚗</div>
+                        <h3>Driver Delay Mitigation</h3>
+                        <p>If your assigned driver is delayed by more than 15 minutes, our system automatically pings the next closest "Pro" driver to take over your route instantly.</p>
+                    </div>
+                    <div class="feature-card glass-effect">
+                        <div class="icon">⏰</div>
+                        <h3>No-Show Protection</h3>
+                        <p>We respect our drivers' time. If a user doesn't arrive within 15 minutes of the scheduled time, a small wait-fee is charged to compensate the driver's fuel and time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 bg-zinc-900 border-b border-zinc-800" style="min-height: auto;">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <h4 class="text-4xl font-bold text-yellow-400">25%</h4>
+                <p class="text-gray-500 text-sm uppercase">Avg. Fare Savings</p>
+            </div>
+            <div>
+                <h4 class="text-4xl font-bold text-yellow-400">15m</h4>
+                <p class="text-gray-500 text-sm uppercase">Max Driver Delay</p>
+            </div>
+            <div>
+                <h4 class="text-4xl font-bold text-yellow-400">120+</h4>
+                <p class="text-gray-500 text-sm uppercase">Cities Connected</p>
+            </div>
+            <div>
+                <h4 class="text-4xl font-bold text-yellow-400">0%</h4>
+                <p class="text-gray-500 text-sm uppercase">Empty Return Trips</p>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-black" style="min-height: auto;">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">How our <span class="text-yellow-400">Smart Logic</span> Works</h2>
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-black text-yellow-400" data-inactive-classes="text-gray-400">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium border-b border-zinc-800 gap-3" data-accordion-target="#accordion-flush-body-1">
+                        <span>One-Way Optimization Algorithm</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div class="py-5 border-b border-zinc-800 text-gray-400">
+                        <p>We use real-time data matching to ensure drivers never return empty. By finding a passenger for the return leg, we pass 25% of the savings directly to you.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium border-b border-zinc-800 gap-3" data-accordion-target="#accordion-flush-body-2">
+                        <span>Driver Delay Mitigation</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="py-5 border-b border-zinc-800 text-gray-400">
+                        <p>Our system tracks drivers via GPS. If a delay exceeds 15 minutes, the system automatically reassigns the closest available Pro driver.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-zinc-950" style="min-height: auto;">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-12">The Intercity <span class="text-yellow-400">Timeline</span></h2>
+            <ol class="relative border-s border-zinc-700">                  
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 bg-yellow-400 rounded-full mt-1.5 -start-1.5 border border-zinc-900"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">January 2024</time>
+                    <h3 class="text-lg font-semibold text-white">Idea Generation</h3>
+                    <p class="text-base font-normal text-gray-400">Identified the "Empty Return" problem in Pakistan's intercity travel.</p>
+                </li>
+                <li class="ms-4">
+                    <div class="absolute w-3 h-3 bg-yellow-400 rounded-full mt-1.5 -start-1.5 border border-zinc-900"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">March 2026</time>
+                    <h3 class="text-lg font-semibold text-white">Scale & Optimization</h3>
+                    <p class="text-base font-normal text-gray-400">Connecting 120 cities with optimized PKR pricing.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class="py-20 bg-black" style="min-height: auto;">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-12">Meet the <span class="text-yellow-400">Experts</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800">
+                    <div class="w-24 h-24 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">👤</div>
+                    <h3 class="text-xl font-bold text-white">Zaid Ahmed</h3>
+                    <p class="text-yellow-400 text-sm">Founder & CEO</p>
+                </div>
+                <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800">
+                    <div class="w-24 h-24 bg-zinc-800 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">👤</div>
+                    <h3 class="text-xl font-bold text-white">Sara Khan</h3>
+                    <p class="text-yellow-400 text-sm">Operations Lead</p>
+                </div>
+                <div class="p-6 bg-zinc-900 rounded-2xl border border-zinc-800">
+                    <div class="w-24 h-24 bg-zinc-800 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">👤</div>
+                    <h3 class="text-xl font-bold text-white">Bilal Malik</h3>
+                    <p class="text-yellow-400 text-sm">Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Intercity <span class="highlight">Pro</span></div>
+                    <p>Smartly optimized intercity travel across Pakistan.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Driver Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Support</h4>
+                    <p>Email: support@intercitypro.pk</p>
+                    <p>Location: Lahore, Punjab</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Intercity Pro Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+</body>
+</html>
