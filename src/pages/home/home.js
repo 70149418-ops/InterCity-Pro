@@ -65,3 +65,31 @@ actionBtn.addEventListener('click', function() {
         taxiForm.submit();
     }
 });
+const handleTheme = () => {
+    const themeSlider = document.getElementById('theme-slider');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        if (themeSlider) themeSlider.checked = false;
+    } 
+    else {
+        body.classList.remove('dark-theme');
+        if (themeSlider) themeSlider.checked = true;
+    }
+    if (themeSlider) {
+        themeSlider.removeEventListener('change', toggleTheme);
+        themeSlider.addEventListener('change', toggleTheme);
+    }
+};
+const toggleTheme = (e) => {
+    if (!e.target.checked) {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+};
+handleTheme();
+document.addEventListener('DOMContentLoaded', handleTheme);

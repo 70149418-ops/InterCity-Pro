@@ -161,7 +161,7 @@ nav a:hover, nav a.active{
 }
 
 .hero-back {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/taxi1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/images/taxi1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -632,4 +632,20 @@ nav ul {
 .btn-signin:hover{
     background: #f1c40f;
     color: #000;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar {
+    background-color: #000;
+    border-bottom: 1px solid #333;
 }

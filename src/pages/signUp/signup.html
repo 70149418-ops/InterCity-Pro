@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | Intercity Pro</title>
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/logo.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="../../../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../home/home.css">
+    <script type="module" src="../home/home.js"></script>
 </head>
-<body>
+<body class="bg-black text-white">
     <header class="navbar">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
             <div class="logo">Intercity <span class="highlight">Pro</span></div>
             <nav>
-                <ul>
+                <ul style="display: flex; align-items: center; gap: 20px; list-style: none;">
                     <li><a href="../../../index.html">Home</a></li>
                     <li><a href="../about/about.html">About</a></li>
                     <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
                     <li><a href="../signin/signin.html">Sign In</a></li>
-                    <li><a href="./signup.html" class="btn-signin active">Sign Up</a></li>
+                    <li><a href="./signup.html" class="btn-signin">Sign Up</a></li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-xs">☀️</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="theme-slider" class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
+                        </label>
+                        <span class="text-xs">🌙</span>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -88,7 +98,7 @@
         </div>
     </div>
 </section>
-    <footer>
+    <footer style="margin-top: -10px;">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">

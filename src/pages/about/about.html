@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Intercity Pro</title>
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/logo.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <script type="module" src="../../../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../home/home.css">
+    <script type="module" src="../home/home.js"></script>
 </head>
 <body>
     <header class="navbar">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
             <div class="logo">Intercity <span class="highlight">Pro</span></div>
             <nav>
-                <ul>
+                <ul style="display: flex; align-items: center; gap: 20px; list-style: none;">
                     <li><a href="../../../index.html">Home</a></li>
                     <li><a href="./about.html" class="active">About</a></li>
                     <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
                     <li><a href="../signin/signin.html">Sign In</a></li>
                     <li><a href="../signUp/signup.html" class="btn-signin">Sign Up</a></li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-xs">☀️</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="theme-slider" class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
+                        </label>
+                        <span class="text-xs">🌙</span>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -69,35 +79,35 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-black" style="min-height: auto;">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">How our <span class="text-yellow-400">Smart Logic</span> Works</h2>
-            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-black text-yellow-400" data-inactive-classes="text-gray-400">
-                <h2 id="accordion-flush-heading-1">
-                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium border-b border-zinc-800 gap-3" data-accordion-target="#accordion-flush-body-1">
-                        <span>One-Way Optimization Algorithm</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-                    <div class="py-5 border-b border-zinc-800 text-gray-400">
-                        <p>We use real-time data matching to ensure drivers never return empty. By finding a passenger for the return leg, we pass 25% of the savings directly to you.</p>
-                    </div>
-                </div>
-                <h2 id="accordion-flush-heading-2">
-                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium border-b border-zinc-800 gap-3" data-accordion-target="#accordion-flush-body-2">
-                        <span>Driver Delay Mitigation</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                    <div class="py-5 border-b border-zinc-800 text-gray-400">
-                        <p>Our system tracks drivers via GPS. If a delay exceeds 15 minutes, the system automatically reassigns the closest available Pro driver.</p>
-                    </div>
+    <section class="py-12 bg-black" style="min-height: auto;">
+    <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">How our <span class="text-yellow-400">Smart Logic</span> Works</h2>
+        
+        <div id="accordion-flush">
+            
+            <div class="border-b border-zinc-800">
+                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-white gap-3" onclick="toggleAccordion('body-1')">
+                    <span>One-Way Optimization Algorithm</span>
+                    <svg class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+                </button>
+                <div id="body-1" class="block py-5 text-gray-400">
+                    <p>We use real-time data matching to ensure drivers never return empty. By finding a passenger for the return leg, we pass 25% of the savings directly to you.</p>
                 </div>
             </div>
+
+            <div class="border-b border-zinc-800">
+                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-white gap-3" onclick="toggleAccordion('body-2')">
+                    <span>Driver Delay Mitigation</span>
+                    <svg class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+                </button>
+                <div id="body-2" class="block py-5 text-gray-400">
+                    <p>Our system tracks drivers via GPS. If a delay exceeds 15 minutes, the system automatically reassigns the closest available Pro driver.</p>
+                </div>
+            </div>
+            
         </div>
-    </section>
+    </div>
+</section>
     <section class="py-20 bg-zinc-950" style="min-height: auto;">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-white mb-12">The Intercity <span class="text-yellow-400">Timeline</span></h2>
@@ -139,8 +149,7 @@
             </div>
         </div>
     </section>
-
-    <footer>
+    <footer style="margin-top: -10px;">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -166,7 +175,5 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="../../../assets/js/script.js"></script>
 </body>
 </html>
