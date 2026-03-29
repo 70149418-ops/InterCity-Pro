@@ -43,6 +43,9 @@ open index.html using a local server.
 ## NavBar:
 ![navbar](/assets/images/navbar.png)
 
+## Favicon Icon:
+![favicon icon](/assets/images/faviconIcon.png)
+
 ## Dark Mode:
 
 ### Before:
